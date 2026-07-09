@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — Boda Alejandra & Diego</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;500&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:#445228;color:#e8eeb8;min-height:100vh}
+
+/* FONDO FLORAL */
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg transform='translate(22,28)'%3E%3Ccircle fill='rgba(200,225,120,0.12)' r='4'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(60)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(120)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(180)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(240)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(300)'/%3E%3C/g%3E%3Cg transform='translate(100,28)'%3E%3Cpath fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' d='M0,9C0,9-11,-2-11,-10C-11,-17-4,-19 0,-12C4,-19 11,-17 11,-10C11,-2 0,9 0,9Z'/%3E%3C/g%3E%3Cg transform='translate(142,20)'%3E%3Ccircle fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' r='7'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' y1='-7' y2='-16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' y1='7' y2='16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='-7' x2='-16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='7' x2='16'/%3E%3C/g%3E%3Cg transform='translate(60,15)'%3E%3Cpath fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' d='M0,3C-8,-14 8,-30 0,-38C-8,-30 8,-14 0,3Z'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='0' y1='3' x2='0' y2='-38'/%3E%3C/g%3E%3Cg transform='translate(22,148)'%3E%3Ccircle fill='rgba(200,225,120,0.12)' r='4'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(0)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(60)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(120)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(180)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(240)'/%3E%3Cellipse fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' cx='0' cy='-12' rx='4' ry='8' transform='rotate(300)'/%3E%3C/g%3E%3Cg transform='translate(104,148)'%3E%3Ccircle fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' r='7'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' y1='-7' y2='-16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' y1='7' y2='16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='-7' x2='-16'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='7' x2='16'/%3E%3C/g%3E%3Cg transform='translate(62,132)'%3E%3Cpath fill='none' stroke='rgba(200,225,120,0.20)' stroke-width='1.5' d='M0,3C-8,-14 8,-30 0,-38C-8,-30 8,-14 0,3Z'/%3E%3Cline stroke='rgba(200,225,120,0.20)' stroke-width='1.5' x1='0' y1='3' x2='0' y2='-38'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:200px 200px;
+  background-repeat:repeat;
+  opacity:1;
+}
+body>*{position:relative;z-index:1}
+
+/* PERGAMINO */
+.parch{
+  background:linear-gradient(145deg,#F9F1E0,#F0E6C8);
+  border:2px solid #B8960C;
+  box-shadow:0 0 0 3px #F5EDD6,0 0 0 5px #B8960C,0 14px 40px rgba(10,18,2,0.55);
+  position:relative;
+  border-radius:1px;
+}
+.parch::before{content:'';position:absolute;inset:8px;border:1px solid rgba(184,150,12,0.35);pointer-events:none}
+
+/* LOGIN */
+#login{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.login-box{width:100%;max-width:420px;padding:52px 44px;text-align:center}
+.login-box::after{content:'✦';position:absolute;top:-13px;left:50%;transform:translateX(-50%);color:#B8960C;background:#F9F1E0;padding:0 12px;font-size:14px;line-height:1}
+.l-corner{position:absolute;width:16px;height:16px}
+.tl{top:6px;left:6px;border-top:2px solid #B8960C;border-left:2px solid #B8960C}
+.tr{top:6px;right:6px;border-top:2px solid #B8960C;border-right:2px solid #B8960C}
+.bl{bottom:6px;left:6px;border-bottom:2px solid #B8960C;border-left:2px solid #B8960C}
+.br{bottom:6px;right:6px;border-bottom:2px solid #B8960C;border-right:2px solid #B8960C}
+.login-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:42px;color:#2C2810;margin-bottom:4px}
+.login-sub{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:#7A6010;margin-bottom:32px;text-transform:uppercase}
+.login-lbl{font-family:'Cinzel',serif;font-size:9px;letter-spacing:4px;color:#7A6010;display:block;text-align:left;margin-bottom:8px;text-transform:uppercase}
+#pwd{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(184,150,12,0.5);padding:10px 0;color:#2C2810;font-family:'Nunito',sans-serif;font-size:16px;outline:none;margin-bottom:28px;-webkit-text-fill-color:#2C2810}
+#pwd::placeholder{color:rgba(44,40,16,0.35)}
+.login-btn{width:100%;background:#7A5C10;border:1px solid #B8960C;color:#F9F1E0;font-family:'Cinzel',sans-serif;font-size:11px;letter-spacing:4px;padding:14px;cursor:pointer;text-transform:uppercase;transition:all 0.3s}
+.login-btn:hover{background:#B8960C}
+#login-err{color:#882010;font-size:13px;margin-top:12px;display:none}
+.back-link{display:block;margin-top:18px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:#7A6010;text-decoration:none;text-transform:uppercase}
+
+/* DASHBOARD */
+#dash{display:none}
+.hdr{background:rgba(30,40,10,0.97);border-bottom:1px solid rgba(200,216,112,0.2);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100}
+.hdr-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;color:#C8D870}
+.hdr-sub{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:rgba(200,216,112,0.5);margin-top:2px}
+.hdr-btns{display:flex;gap:8px;flex-wrap:wrap}
+.hbtn{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;padding:8px 14px;cursor:pointer;background:transparent;border:1px solid rgba(200,216,112,0.35);color:#C8D870;transition:all 0.25s}
+.hbtn:hover{background:rgba(200,216,112,0.1)}
+.hbtn.ex{background:#7A5C10;border-color:#B8960C;color:#F9F1E0}
+.hbtn.ex:hover{background:#B8960C}
+
+.body{max-width:1160px;margin:0 auto;padding:28px 20px}
+.upd{text-align:right;font-size:12px;color:rgba(200,216,112,0.45);margin-bottom:16px}
+
+/* STAT CARDS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:0}
+.scard{background:linear-gradient(145deg,#F9F1E0,#EDE3C4);border:1px solid rgba(184,150,12,0.45);border-radius:1px;padding:22px 14px;text-align:center;cursor:pointer;transition:transform 0.2s;position:relative;overflow:hidden}
+.scard:hover{transform:translateY(-2px);border-color:#B8960C}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.scard.g::before{background:linear-gradient(90deg,transparent,#2A6818,transparent)}
+.scard.r::before{background:linear-gradient(90deg,transparent,#882010,transparent)}
+.scard.go::before{background:linear-gradient(90deg,transparent,#B8960C,transparent)}
+.scard.b::before{background:linear-gradient(90deg,transparent,#1A5868,transparent)}
+.sico{font-size:20px;margin-bottom:6px;display:block}
+.snum{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,6vw,58px);font-weight:300;line-height:1;display:block;color:#2C2810}
+.scard.g .snum{color:#2A6818}
+.scard.r .snum{color:#882010}
+.scard.go .snum{color:#7A5010}
+.scard.b .snum{color:#1A5868}
+.slbl{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:#7A6010;margin-top:8px;display:block;text-transform:uppercase}
+
+/* PROGRESS */
+.ph{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pt{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:#7A6010;text-transform:uppercase}
+.pp{font-family:'Cinzel',serif;font-size:20px;color:#2C2810;font-weight:500}
+.pbb{height:7px;background:rgba(44,40,16,0.15);border-radius:4px;margin-bottom:8px}
+.pbf{height:100%;background:linear-gradient(90deg,#7A6010,#C8D870);border-radius:4px;transition:width 1s}
+.pn{font-size:13px;color:#7A6010;font-family:'Nunito',sans-serif}
+.pn strong{color:#2C2810;font-weight:600}
+
+/* CHARTS */
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ccrd{background:linear-gradient(145deg,#F9F1E0,#EDE3C4);border:1px solid rgba(184,150,12,0.4);border-radius:1px;padding:22px 18px;box-shadow:0 2px 8px rgba(10,18,2,0.12)}
+.ctit{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:#7A6010;text-align:center;margin-bottom:18px;text-transform:uppercase}
+.dwrap{position:relative;width:130px;height:130px;margin:0 auto 14px}
+.dwrap svg{transform:rotate(-90deg)}
+.dcen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.dcen span{font-family:'Cormorant Garamond',serif;font-size:32px;color:#2C2810;line-height:1}
+.dcen small{font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;color:#7A6010}
+.leg{display:flex;flex-direction:column;gap:7px;margin-top:6px}
+.litem{display:flex;align-items:center;gap:8px;font-size:13px;color:#2C2810;cursor:pointer;padding:5px 8px;border:1px solid transparent;border-radius:2px;transition:all 0.2s}
+.litem:hover,.litem.on{background:rgba(184,150,12,0.1);border-color:rgba(184,150,12,0.35)}
+.ldot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.fcta{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:#7A6010;text-align:center;margin-top:12px;cursor:pointer;text-transform:uppercase}
+.fcta:hover{color:#B8960C}
+.grow{margin-bottom:12px}
+.ghead{display:flex;justify-content:space-between;margin-bottom:4px}
+.gname{font-family:'Nunito',sans-serif;font-size:13px;color:#2C2810}
+.gnums{font-family:'Cinzel',serif;font-size:10px;color:#7A6010}
+.gbb{height:5px;background:rgba(184,150,12,0.15);border-radius:3px}
+.gbf{height:100%;background:linear-gradient(90deg,#7A6010,#C8D870);border-radius:3px;transition:width 0.8s}
+
+/* TABLE */
+.twrap{overflow-x:auto}
+.thdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.ttit{font-family:'Cinzel',serif;font-size:10px;letter-spacing:4px;color:#7A6010;text-transform:uppercase}
+.tcnt{font-size:13px;color:rgba(44,40,16,0.6);font-family:'Nunito',sans-serif;margin-left:8px}
+.srch{background:rgba(255,255,255,0.65);border:1px solid rgba(184,150,12,0.4);color:#2C2810;padding:8px 13px;font-family:'Nunito',sans-serif;font-size:13px;outline:none;border-radius:2px;min-width:190px}
+.srch::placeholder{color:rgba(44,40,16,0.38)}
+table{width:100%;border-collapse:collapse}
+thead th{font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:#7A6010;text-transform:uppercase;padding:10px 8px;text-align:left;border-bottom:1px solid rgba(184,150,12,0.28);white-space:nowrap}
+.gr td{padding:11px 8px;border-bottom:1px solid rgba(184,150,12,0.1);color:#2C2810;font-family:'Nunito',sans-serif;font-size:13px;vertical-align:middle}
+.gr:hover td{background:rgba(184,150,12,0.05)}
+.erow td{padding:28px;text-align:center;color:rgba(44,40,16,0.4);font-size:14px}
+.bdg{padding:3px 10px;border-radius:20px;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.si{background:rgba(42,92,24,0.18);color:#2A6818;border:1px solid rgba(42,92,24,0.35)}
+.no{background:rgba(122,32,16,0.14);color:#882010;border:1px solid rgba(122,32,16,0.3)}
+.ti{background:rgba(255,255,255,0.7);border:1px solid rgba(184,150,12,0.4);border-radius:3px;padding:4px 7px;color:#2C2810;font-family:'Nunito',sans-serif;font-size:12px;outline:none}
+
+/* FILTER BADGE */
+#fbadge{display:none;align-items:center;gap:12px;background:rgba(184,150,12,0.08);border:1px solid rgba(184,150,12,0.28);padding:9px 16px;margin-bottom:14px;border-radius:2px}
+.ftxt{font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:#7A6010;text-transform:uppercase}
+.fclr{margin-left:auto;background:transparent;border:1px solid rgba(184,150,12,0.35);color:#7A6010;font-family:'Cinzel',serif;font-size:8px;letter-spacing:2px;padding:5px 12px;cursor:pointer;text-transform:uppercase}
+
+/* LOADING */
+#load{display:none;position:fixed;inset:0;background:rgba(46,60,18,0.82);z-index:200;align-items:center;justify-content:center}
+.spin{width:36px;height:36px;border:3px solid rgba(200,216,112,0.2);border-top-color:#C8D870;border-radius:50%;animation:sp 0.8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+@media(max-width:700px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .charts{grid-template-columns:1fr}
+  .hdr{padding:10px 14px}
+  .body{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="parch login-box">
+    <span class="l-corner tl"></span><span class="l-corner tr"></span>
+    <span class="l-corner bl"></span><span class="l-corner br"></span>
+    <h1 class="login-title">Alejandra &amp; Diego</h1>
+    <p class="login-sub">Panel de invitados · 19 Dic 2026</p>
+    <label class="login-lbl">Contraseña</label>
+    <input type="password" id="pwd" placeholder="••••••••">
+    <button class="login-btn" id="login-btn">Entrar al panel</button>
+    <p id="login-err">Contraseña incorrecta. Intenta de nuevo.</p>
+    <a href="index.html" class="back-link">← Regresar a la invitación</a>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dash">
+  <div class="hdr">
+    <div>
+      <div class="hdr-title">Panel de Invitados</div>
+      <div class="hdr-sub">Alejandra &amp; Diego · 19 de Diciembre 2026</div>
+    </div>
+    <div class="hdr-btns">
+      <button class="hbtn" id="btn-inv">← Invitación</button>
+      <button class="hbtn" id="btn-act">↻ Actualizar</button>
+      <button class="hbtn ex" id="btn-csv">⬇ Exportar CSV</button>
+      <button class="hbtn" id="btn-sal">Salir</button>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="upd">Última actualización: <span id="upd-time">—</span></div>
+
+    <!-- Stats -->
+    <div class="parch" style="padding:22px 20px;margin-bottom:20px">
+      <div class="stats">
+        <div class="scard g" id="card-conf">
+          <span class="sico" style="color:#2A6818;font-size:26px;font-weight:700">✓</span>
+          <span class="snum" id="n-conf">0</span>
+          <span class="slbl">Confirmados</span>
+        </div>
+        <div class="scard r" id="card-decl">
+          <span class="sico" style="color:#882010;font-size:26px;font-weight:700">✗</span>
+          <span class="snum" id="n-decl">0</span>
+          <span class="slbl">No asistirán</span>
+        </div>
+        <div class="scard go">
+          <span class="sico">👥</span>
+          <span class="snum" id="n-ppl">0</span>
+          <span class="slbl">Personas totales</span>
+        </div>
+        <div class="scard b">
+          <span class="sico">📋</span>
+          <span class="snum" id="n-tot">0</span>
+          <span class="slbl">Respuestas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cupo -->
+    <div class="parch" style="padding:22px 26px;margin-bottom:20px">
+      <div class="ph">
+        <span class="pt">Cupo utilizado</span>
+        <span class="pp"><span id="pct">0</span>%</span>
+      </div>
+      <div class="pbb"><div class="pbf" id="pbar" style="width:0%"></div></div>
+      <p class="pn"><span id="pconf">0</span> personas confirmadas de un cupo máximo de <strong>300</strong></p>
+    </div>
+
+    <!-- Gráficas -->
+    <div class="parch" style="padding:22px 20px;margin-bottom:20px">
+      <div class="charts">
+        <div class="ccrd">
+          <p class="ctit">Respuestas</p>
+          <div class="dwrap">
+            <svg width="130" height="130" viewBox="0 0 130 130">
+              <circle cx="65" cy="65" r="52" fill="none" stroke="rgba(184,150,12,0.15)" stroke-width="14"/>
+              <circle id="dc" cx="65" cy="65" r="52" fill="none" stroke="#6AAE48" stroke-width="14" stroke-dasharray="0 327" stroke-linecap="round" style="transition:stroke-dasharray 0.8s"/>
+              <circle id="dd" cx="65" cy="65" r="52" fill="none" stroke="#C05840" stroke-width="14" stroke-dasharray="0 327" stroke-linecap="round" style="transition:stroke-dasharray 0.8s"/>
+            </svg>
+            <div class="dcen"><span id="dtot">0</span><small>TOTAL</small></div>
+          </div>
+          <div class="leg">
+            <div class="litem" id="lc"><span class="ldot" style="background:#6AAE48"></span><span>Confirmados</span></div>
+            <div class="litem" id="ld"><span class="ldot" style="background:#C05840"></span><span>Declinaron</span></div>
+          </div>
+          <p class="fcta" id="clr-d">Click para limpiar filtro</p>
+        </div>
+        <div class="ccrd">
+          <p class="ctit">Distribución de grupos</p>
+          <div id="gchart"></div>
+          <p class="fcta" id="clr-g">Click para limpiar filtro</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div class="parch" style="padding:22px 20px;margin-bottom:32px">
+      <div id="fbadge">
+        <span class="ftxt">Filtro: <span id="flbl"></span></span>
+        <button class="fclr" id="fclr">✕ Limpiar</button>
+      </div>
+      <div class="thdr">
+        <div><span class="ttit">Lista de invitados</span><span class="tcnt" id="tcnt">0 invitados</span></div>
+        <input type="text" class="srch" id="srch" placeholder="Buscar invitado...">
+      </div>
+      <div class="twrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Nombre</th><th>Invitados</th><th>Asistencia</th>
+              <th>Mesa</th><th>Teléfono</th><th>WhatsApp</th><th>Fecha respuesta</th><th>Fecha envío WA</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr class="erow"><td colspan="9">Cargando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="load" style="display:none"><div class="spin"></div></div>
+
+<script>
+var PWD       = 'boda2026';
+var MAX       = 300;
+var GAS       = 'https://script.google.com/macros/s/AKfycbxWcqwyGRiasrSoUzzJi8wW6v4hivkUBeFmkUy2KxhK2OEH4mRc2M82vrZAv17d1NoR/exec';
+var allRows   = [];
+var activeFlt = null;
+
+/* ── INIT ── */
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('login-btn').addEventListener('click', doLogin);
+  document.getElementById('pwd').addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
+  document.getElementById('btn-inv').addEventListener('click', function(){ location.href='index.html'; });
+  document.getElementById('btn-act').addEventListener('click', loadData);
+  document.getElementById('btn-csv').addEventListener('click', exportCSV);
+  document.getElementById('btn-sal').addEventListener('click', doLogout);
+  document.getElementById('srch').addEventListener('input', render);
+  document.getElementById('fclr').addEventListener('click', clearFlt);
+  document.getElementById('clr-d').addEventListener('click', clearFlt);
+  document.getElementById('clr-g').addEventListener('click', clearFlt);
+  document.getElementById('lc').addEventListener('click', function(){ setFlt(2,'onfirm','Confirmados ✓'); });
+  document.getElementById('ld').addEventListener('click', function(){ setFlt(2,'no asist','No asistirán ✗'); });
+  document.getElementById('card-conf').addEventListener('click', function(){ setFlt(2,'onfirm','Confirmados ✓'); });
+  document.getElementById('card-decl').addEventListener('click', function(){ setFlt(2,'no asist','No asistirán ✗'); });
+});
+
+/* ── LOGIN ── */
+function doLogin() {
+  var v = document.getElementById('pwd').value;
+  if (v === PWD) {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('dash').style.display  = 'block';
+    loadData();
+    setInterval(loadData, 120000);
+  } else {
+    document.getElementById('login-err').style.display = 'block';
+    document.getElementById('pwd').value = '';
+    document.getElementById('pwd').focus();
+  }
+}
+
+function doLogout() {
+  document.getElementById('dash').style.display  = 'none';
+  document.getElementById('login').style.display = 'flex';
+  document.getElementById('pwd').value = '';
+  document.getElementById('login-err').style.display = 'none';
+  allRows = []; activeFlt = null;
+}
+
+/* ── DATOS ── */
+function loadData() {
+  document.getElementById('load').style.display = 'flex';
+  fetch(GAS + '?t=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      var rows = j.data || j.values || [];
+      if (rows.length && typeof rows[0][1] === 'string' && isNaN(rows[0][1])) {
+        rows = rows.slice(1);
+      }
+      allRows = rows.filter(function(r){ return r && r[0] && String(r[0]).trim(); });
+      render();
+      document.getElementById('upd-time').textContent = new Date().toLocaleTimeString('es-MX');
+    })
+    .catch(function(e){
+      console.error(e);
+      document.getElementById('tbody').innerHTML =
+        '<tr class="erow"><td colspan="9">⚠ Error al cargar. Verifica tu conexión.</td></tr>';
+    })
+    .finally(function(){ document.getElementById('load').style.display = 'none'; });
+}
+
+/* ── RENDER ── */
+function render() {
+  var q = document.getElementById('srch').value.toLowerCase();
+  var rows = allRows.filter(function(r){
+    if (q && !String(r[0]||'').toLowerCase().includes(q)) return false;
+    if (!activeFlt) return true;
+    return String(r[activeFlt.col]||'').toLowerCase().includes(activeFlt.val);
+  });
+  renderStats(allRows);
+  renderTable(rows);
+  renderBadge();
+  renderHL();
+}
+
+function renderStats(rows) {
+  var conf = 0, decl = 0, ppl = 0, cppl = 0;
+  rows.forEach(function(r){
+    var a = String(r[2]||'').toLowerCase();
+    var n = parseInt(r[1])||0;
+    ppl += n;
+    if (a.includes('confirm'))  { conf++; cppl += n; }
+    if (a.includes('no asist')) { decl++; }
+  });
+  document.getElementById('n-conf').textContent = conf;
+  document.getElementById('n-decl').textContent = decl;
+  document.getElementById('n-ppl').textContent  = ppl;
+  document.getElementById('n-tot').textContent  = rows.length;
+  document.getElementById('dtot').textContent   = rows.length;
+
+  var pct = MAX ? Math.round(cppl/MAX*100) : 0;
+  document.getElementById('pct').textContent  = pct;
+  document.getElementById('pbar').style.width = pct + '%';
+  document.getElementById('pconf').textContent = cppl;
+
+  var C = 2*Math.PI*52;
+  var cl = rows.length ? C*conf/rows.length : 0;
+  var dl = rows.length ? C*decl/rows.length : 0;
+  var g  = rows.length ? C*0.02 : 0;
+  document.getElementById('dc').setAttribute('stroke-dasharray', cl+' '+(C-cl));
+  document.getElementById('dc').setAttribute('stroke-dashoffset','0');
+  document.getElementById('dd').setAttribute('stroke-dasharray', dl+' '+(C-dl));
+  document.getElementById('dd').setAttribute('stroke-dashoffset', -(cl+g));
+
+  var grp = {'1':0,'2':0,'3':0,'4':0,'5':0,'6':0,'7':0,'8':0,'9':0,'10+':0};
+  rows.forEach(function(r){
+    var n = parseInt(r[1])||1;
+    if(n>=10) grp['10+']++;
+    else grp[String(n)]++;
+  });
+  var mx = Math.max.apply(null, Object.values(grp).concat([1]));
+  var tot = rows.length || 1;
+  document.getElementById('gchart').innerHTML = Object.keys(grp).map(function(k){
+    var v=grp[k], p=Math.round(v/tot*100);
+    return '<div class="grow"><div class="ghead">'+
+      '<span class="gname">'+k+(k==='1'?' persona':' personas')+'</span>'+
+      '<span class="gnums">'+v+' &nbsp;'+p+'%</span></div>'+
+      '<div class="gbb"><div class="gbf" style="width:'+Math.round(v/mx*100)+'%"></div></div></div>';
+  }).join('');
+}
+
+function renderTable(rows) {
+  document.getElementById('tcnt').textContent =
+    (activeFlt || document.getElementById('srch').value)
+      ? rows.length+' de '+allRows.length+' invitados'
+      : rows.length+' invitados';
+
+  if (!rows.length) {
+    document.getElementById('tbody').innerHTML =
+      '<tr class="erow"><td colspan="9">Sin resultados 🔍</td></tr>';
+    return;
+  }
+
+  // El mensaje y link WA se construyen en buildWA()
+
+  var is = 'background:rgba(255,255,255,0.7);border:1px solid rgba(184,150,12,0.4);border-radius:3px;padding:4px 7px;color:#2C2810;font-family:Nunito,sans-serif;font-size:12px;outline:none;';
+
+  document.getElementById('tbody').innerHTML = rows.map(function(r,i){
+    var conf = String(r[2]||'').toLowerCase().includes('confirm');
+    var key  = String(r[0]||'').replace(/\s+/g,'_');
+    var mesa   = localStorage.getItem('mesa_'+key)||'';
+    var tel    = localStorage.getItem('tel_'+key)||'';
+    var fechaWA= localStorage.getItem('fechawa_'+key)||'';
+    var fecha  = r[3] ? new Date(r[3]).toLocaleDateString('es-MX') : '—';
+    var tc   = tel.replace(/[\s\-\(\)]/g,'').replace(/^\+/,'');
+    if (tc && !tc.startsWith('52') && tc.length===10) tc='52'+tc;
+    var wa = tc
+      ? '<button onclick="sendWA(\''+key+'\',\''+tc+'\')" style="display:inline-flex;align-items:center;gap:4px;padding:5px 10px;background:#25D366;color:#fff;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;border:none;white-space:nowrap;">📱 Enviar</button>'
+      : '<span style="color:rgba(44,40,16,0.3);font-size:11px;">Sin tel.</span>';
+    return '<tr class="gr">'+
+      '<td style="color:rgba(44,40,16,0.4);font-size:12px;">'+(i+1)+'</td>'+
+      '<td style="font-weight:500;">'+String(r[0]||'—')+'</td>'+
+      '<td style="text-align:center;">'+String(r[1]||'—')+'</td>'+
+      '<td><span class="bdg '+(conf?'si':'no')+'">'+(conf?'✓ Confirmado':'✗ No asiste')+'</span></td>'+
+      '<td style="padding:4px;"><input type="text" value="'+mesa+'" placeholder="Mesa #" style="'+is+'width:68px;text-align:center;" onchange="save(\'mesa_'+key+'\',this.value)"></td>'+
+      '<td style="padding:4px;"><input type="tel" value="'+tel+'" placeholder="+52 555 000 0000" style="'+is+'width:138px;" onchange="save(\'tel_'+key+'\',this.value)"></td>'+
+      '<td style="padding:4px;">'+wa+'</td>'+
+      '<td style="font-size:11px;color:rgba(44,40,16,0.45);">'+fecha+'</td>'+
+      '<td style="font-size:11px;color:rgba(44,40,16,0.55);padding:8px;">'+
+        (fechaWA ? new Date(fechaWA+'T12:00:00').toLocaleDateString('es-MX') : '<span style="color:rgba(44,40,16,0.3);">—</span>')+
+      '</td>'+
+    '</tr>';
+  }).join('');
+}
+
+function buildMsg(key) {
+  var mesa = localStorage.getItem('mesa_'+key) || '';
+  var mesaTxt = mesa ? ('\n🪑 Tu mesa asignada es: *Mesa ' + mesa + '*') : '';
+  var txt =
+    '¡Hola! 🌿 Te recordamos que la boda de Alejandra & Diego ' +
+    'es el sábado 19 de diciembre de 2026.' + mesaTxt + '\n\n' +
+    '⛪ Ceremonia religiosa: 1:00 PM\n' +
+    'Capilla de Guadalupe\n' +
+    'https://maps.app.goo.gl/KztjPdUccfr3Pt9r6\n\n' +
+    '🎊 Recepción & Boda Civil: 3:15 PM\n' +
+    'Salón de eventos\n' +
+    'https://maps.app.goo.gl/UFHS8tJCTHNdDGpL9\n\n' +
+    '¡Los esperamos con mucho amor! 💚';
+  return encodeURIComponent(txt);
+}
+
+function sendWA(key, tel) {
+  var msg = buildMsg(key);
+  // Abrir WhatsApp
+  window.open('https://wa.me/' + tel + '?text=' + msg, '_blank');
+  // Auto-llenar fecha de envío WA con hoy
+  var today = new Date();
+  var yyyy = today.getFullYear();
+  var mm   = String(today.getMonth()+1).padStart(2,'0');
+  var dd   = String(today.getDate()).padStart(2,'0');
+  var dateStr = yyyy + '-' + mm + '-' + dd;
+  localStorage.setItem('fechawa_'+key, dateStr);
+  // Actualizar el input de fecha en la tabla sin re-renderizar todo
+  var inputs = document.querySelectorAll('input[type="date"]');
+  inputs.forEach(function(inp) {
+    if (inp.getAttribute('onchange') && inp.getAttribute('onchange').includes(key)) {
+      inp.value = dateStr;
+    }
+  });
+}
+
+function save(k,v){ localStorage.setItem(k,v); }
+
+function renderBadge() {
+  var b = document.getElementById('fbadge');
+  if (activeFlt) {
+    b.style.display='flex';
+    document.getElementById('flbl').textContent = activeFlt.label;
+  } else {
+    b.style.display='none';
+  }
+}
+
+function renderHL() {
+  ['card-conf','card-decl'].forEach(function(id){
+    document.getElementById(id).style.outline='none';
+  });
+  ['lc','ld'].forEach(function(id){ document.getElementById(id).classList.remove('on'); });
+  if (!activeFlt) return;
+  if (activeFlt.val==='onfirm') {
+    document.getElementById('card-conf').style.outline='3px solid #2A6818';
+    document.getElementById('lc').classList.add('on');
+  } else {
+    document.getElementById('card-decl').style.outline='3px solid #882010';
+    document.getElementById('ld').classList.add('on');
+  }
+}
+
+/* ── FILTROS ── */
+function setFlt(col,val,label){ activeFlt={col:col,val:val,label:label}; render(); }
+function clearFlt(){ activeFlt=null; document.getElementById('srch').value=''; render(); }
+
+/* ── CSV ── */
+function exportCSV(){
+  var rows = activeFlt
+    ? allRows.filter(function(r){ return String(r[activeFlt.col]||'').toLowerCase().includes(activeFlt.val); })
+    : allRows;
+  var hd = ['Nombre','Invitados','Asistencia','Mesa','Teléfono','Fecha respuesta','Fecha envío WA'].join(',');
+  var csv = [hd].concat(rows.map(function(r){
+    var k=String(r[0]||'').replace(/\s+/g,'_');
+    return [r[0],r[1],r[2],
+      localStorage.getItem('mesa_'+k)||'',
+      localStorage.getItem('tel_'+k)||'',
+      r[3]?new Date(r[3]).toLocaleDateString('es-MX'):'',
+      localStorage.getItem('fechawa_'+k)||''
+    ].map(function(v){ return '"'+String(v||'').replace(/"/g,'""')+'"'; }).join(',');
+  })).join('\n');
+  var a=document.createElement('a');
+  a.href='data:text/csv;charset=utf-8,\uFEFF'+encodeURIComponent(csv);
+  a.download='invitados.csv'; a.click();
+}
+</script>
+</body>
+</html>
